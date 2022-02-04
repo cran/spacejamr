@@ -1,5 +1,5 @@
 # Author: Darren Colby
-# Date: 9/6/2021
+# Date: 1/27/2022
 # Purpose: To simulate spatial point processes
 
 # Constructor methods for the PointSim class ------------------------------
@@ -16,14 +16,14 @@
 #' @param a window of class spacejamr to use as the spatial extent
 #' @param seed an optional seed
 #'
-#' @return A ppp object from the 'spatstat.core' package
+#' @return A ppp object from the 'spatstat' package
 #'
 #' @author Darren Colby
 #' Email: dscolby17@gmail.com
 #' @noRd
 validate_PointSim <- function(points, window, type, seed) {
 
-   stopifnot(methods::is(window, c("spacejamr", "owin")))
+   stopifnot(inherits(window, c("spacejamr", "owin")))
 
    if (!is.null(seed)) {set.seed(seed)}  # Optional seed
 
@@ -116,7 +116,7 @@ PointSim <- function(points, window, type = poisson_process, seed = NULL) {
 #' @details The returned plot can be refined with standard ggplot2 functions
 #'
 #' @param x an object of class PointSim or one of its child classes
-#' @param y ignored.
+#' @param y ignored
 #' @param ... ignored
 #' @param title an optional title. Default is "Simulated Points".
 #' @param color an optional color for the simulated points. Default is red.
@@ -188,7 +188,7 @@ print.PointSim <- function(x, ...) {
 #' HaltonSeq object, whcih are both child classes of the PointSim class.
 #'
 #' @param object a PointSim object
-#' @param ... ignored.
+#' @param ... ignored
 #'
 #' @return No return value, called for side effects
 #'

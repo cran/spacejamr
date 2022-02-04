@@ -2,9 +2,8 @@
 # spacejamr: Simulate Spatial Bernoulli Networks
 
 <!-- badges: start -->
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/dscolby/spacejamr?branch=master&svg=true)](https://ci.appveyor.com/project/dscolby/spacejamr)
 [![R-CMD-check](https://github.com/dscolby/spacejamr/workflows/R-CMD-check/badge.svg)](https://github.com/dscolby/spacejamr/actions)
-[![Codecov test coverage](https://codecov.io/gh/dscolby/spacejamr/branch/master/graph/badge.svg)](https://codecov.io/gh/dscolby/spacejamr?branch=master)
+[![Codecov test coverage](https://app.codecov.io/gh/dscolby/spacejamr?branch=master)
 <!-- badges: end -->
 
 The goal of spacejamr is to enable social network analysis where conventional
@@ -94,5 +93,5 @@ Creator: Darren Colby\
 Creater ORCID: 0000-0001-8468-2755\
 Maintainer: Darren Colby\
 Maintainer email: dscolby17@gmail.com\
-Current version: 0.1.1\
+Current version: 0.2\
 License: MIT

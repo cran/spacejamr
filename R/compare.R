@@ -1,5 +1,5 @@
 # Author: Darren Colby
-# Date: 9/6/2021
+# Date: 1/27/2022
 # Purpose: Provide a function to compare two simulated networks
 
 
@@ -50,8 +50,8 @@
 #' @export
 compare_networks <- function(net1, net2) {
 
-    stopifnot(methods::is(net1, c("NetSim", "igraph"))&
-                  methods::is(net2, c("NetSim", "igraph")))
+    stopifnot(inherits(net1, c("NetSim", "igraph")) &
+                  inherits(net2, c("NetSim", "igraph")))
 
     # Compute basic network statistics
     density <- c(igraph::edge_density(net1), igraph::edge_density(net1))
@@ -72,7 +72,7 @@ compare_networks <- function(net1, net2) {
 
     print(df)
 
-    return(df)
+    return(dplyr::as_tibble(df))
 
 }
 

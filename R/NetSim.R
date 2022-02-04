@@ -1,5 +1,5 @@
 # Author: Darren Colby
-# Date: 9/6/2021
+# Date: 1/27/2022
 # Purpose: To simulate spatial Bernoulli networks
 
 # Constructor methods to simulate a standard power law network ------------
@@ -30,7 +30,7 @@
 validate_NetSim <- function(point_sim, sif, base_prob, scale, threshold, power) {
 
     # Ensures proper input
-    stopifnot(methods::is(point_sim, "PointSim"))
+    stopifnot(inherits(point_sim, "PointSim"))
 
     # Calculate the distance between all pairs of nodes
     distances <- suppressWarnings(dplyr::as_tibble(spatstat.geom::pairdist(point_sim),
@@ -184,7 +184,7 @@ plot.NetSim <- function(x, y, ..., layout = "stress",
                         title = "Network Simulation", node_color = "red",
                         edge_color = "blue") {
 
-    stopifnot(methods::is(x, "NetSim"))
+    stopifnot(class(x) == c("NetSim", "igraph"))
 
     plot <- ggraph::ggraph(x,
                            layout = layout) +
