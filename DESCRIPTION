@@ -1,6 +1,6 @@
 Package: spacejamr
 Title: Simulate Spatial Bernoulli Networks
-Version: 0.2
+Version: 0.2.1
 Authors@R: 
     person(given = "Darren",
            family = "Colby",
@@ -34,7 +34,7 @@ Depends: R (>= 3.5)
 Suggests: covr, testthat (>= 3.0.0)
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2022-02-04 02:55:25 UTC; Darren Colby
+Packaged: 2022-04-01 19:53:24 UTC; publicuser
 Author: Darren Colby [aut, cre] (<https://orcid.org/0000-0001-8468-2755>)
 Repository: CRAN
-Date/Publication: 2022-02-04 03:20:02 UTC
+Date/Publication: 2022-04-01 20:10:02 UTC
